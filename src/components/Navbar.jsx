@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [toggleNavbar, setToggleNavbar] = useState(false);
@@ -10,12 +11,13 @@ export default function Navbar() {
           <span className="inline-block h-10 w-32 rounded-lg bg-gray-200"></span>
         </a>
         <div className="flex md:order-2">
-          <button
+          <Link to="/login"><button
             type="button"
             className="text-white bg-indigo-700 hover:bg-indigo-800 focus:ring-4 focus:outline-none focus:ring-indigo-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0"
           >
             Login
           </button>
+          </Link>
           <button
             onClick={() => setToggleNavbar(!toggleNavbar)}
             type="button"
