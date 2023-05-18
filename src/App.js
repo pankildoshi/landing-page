@@ -5,6 +5,7 @@ import LandingPage from "./pages/LandingPage";
 import Login from "./components/login";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Signup from "./components/signup";
 function App() {
   return (
     <>
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage/>}></Route>
           <Route path="/login" element={[<Login/>,<Footer/>]}></Route>
+          <Route path="/signup" element={[<Signup/>,<Footer/>]}></Route>
         </Routes>
       </BrowserRouter>
     </>
